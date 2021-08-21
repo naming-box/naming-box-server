@@ -1,0 +1,5 @@
+# 프로파일 무관 공통 속성값
+
+spring:
+  profiles:
+    active: local
