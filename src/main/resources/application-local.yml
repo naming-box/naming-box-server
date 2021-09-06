@@ -8,5 +8,7 @@ spring:
     open-in-view: false
     generate-ddl: true
     show-sql: true
+    database : mysql
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect

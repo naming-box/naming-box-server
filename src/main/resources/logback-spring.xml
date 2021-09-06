@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- configuration file for LogBack (slf4J implementation) See here for more 
+	details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<logger name="kr.co.thirtytwodevs" level="INFO"/>
+
+	<include resource="logback/logback-appender-console.xml" />
+	<include resource="logback/logback-appender-file.xml" />
+
+	<root level="INFO">
+		<springProfile name = "dev">
+			<appender-ref ref="console" />
+			<appender-ref ref="file" />
+		</springProfile>
+		<springProfile name = "local">
+			<appender-ref ref="console" />
+		</springProfile>
+
+	</root>
+</configuration>
