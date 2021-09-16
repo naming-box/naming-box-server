@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MemberRepository extends JpaRepository<MemberVO, Long> {
-  public int countAllBy();
+  int countAllBy();
 }
